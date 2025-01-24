@@ -1,0 +1,63 @@
+name: &name "Philipp Wimmers"
+title: *name
+title_separator: "-"
+subtitle: "Software engineer and engineering manager"
+email: &mail "mail@philipp-wimmers.de"
+description: >-
+  Philipp Wimmers - Software engineer and engineering manager
+baseurl: "/"
+url: &url "https://philipp-wimmers.de"
+github_username:  "pwimmers"
+repository: "pwimmers/pwimmers.github.io"
+
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+minimal_mistakes_skin: "default"
+logo: "/assets/images/logo_44x44.png"
+
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+
+include:
+  - _pages
+
+author:
+  name: *name
+  avatar: "/assets/images/philipp.jpg"
+  bio: "Seasoned software engineer turned engineering manager with a passion for tech, self-hosting, and automation. When not building systems, you'll find me exploring mountains, cooking up a storm, or perfecting the art of pizza-making."
+  location: "Düsseldorf, Germany"
+  links: &links
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: *url
+    - label: "Mail"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:mail@philipp-wimmers.de"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/pwimmers"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/philipp-wimmers"
+
+footer:
+  links:
+    *links
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
